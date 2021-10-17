@@ -5,6 +5,15 @@ html {
   padding: 0;
   background:lightslategray;
 }
+input[type="radio"] {
+  display: none;
+  opacity: 0;
+  z-index: -1;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
 .wrapper {
   height: 100%;
   padding-top: 50px;
@@ -16,7 +25,7 @@ html {
 }
 .slider {
   width: 400%;
-  max-height: 65vh;
+  height: 600px;
   transform: translateX(0%);
   transition: all 0.5s ease-out;
 }
@@ -31,19 +40,208 @@ html {
   height: 550px;
   object-fit: fill;
 }
-#slide1:checked~.slider {
+.bottom-block {
+  /* width: 100%; */
+  /* column-count: 2; */
+  /* column-gap: 400px; */
+  /* break-before: column; */
+  /* column-width: 456px; */
+}
+.bottom-block .captions,
+.bottom-block .controls {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.caption span,
+.control span {
+  display: inline-block;
+  white-space: nowrap;
+}
+.captions {
+  float: left;
+  width: 80%;
+  overflow: hidden;
+}
+.caption {
+  font-size: 14px;
+  color: lavender;
+  line-height: 18px;
+  width: 400%;
+  padding: 0;
+  margin: 0;
+  transform: translateX(0%);
+  transition: all 0.5s ease-out;
+  text-align: left;
+}
+.caption span {
+  width: 24.88%;
+  padding: 0;
+  margin: 0;
+}
+.controls {
+  float: right;
+  width: 20%;
+}
+.control {
+  display: flex;
+  justify-content: flex-end;
+}
+.controls a {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  padding: 0 3px;
+}
+.controls span {
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  border: 2px solid sandybrown;
+  border-radius: 50%;
+  background-color: sandybrown;
+  transition: all 0.5s ease-out;
+}
+.controls a:hover span {
+  background-color: #fff;
+  border-color: #fff;
+  transform: scale(1.1) ;
+}
+
+
+footer {
+  width: 800px;
+  margin: 0 auto;
+}
+.footer {
+  width: 100%;
+  padding-top: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gh-logo,
+.rs-logo {
+  flex-wrap: nowrap;
+  min-width: 150px;
+}
+.gh-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+#slide1:target~ .container .slider-wrapper .slider {
   transform: translateX(0%);
 }
-#slide2:checked~.slider {
+#slide2:target~ .container .slider-wrapper .slider {
   transform: translateX(-25%);
 }
-#slide3:checked~.slider {
+#slide3:target~ .container .slider-wrapper .slider {
   transform: translateX(-50%);
 }
-#slide4:checked ~ .slider {
+#slide4:target~ .container .slider-wrapper .slider {
   transform: translateX(-75%);
+}
+
+#slide1:target~.container .bottom-block .caption {
+  transform: translateX(0%);
+}
+#slide2:target~.container .bottom-block .caption {
+  transform: translateX(-25%);
+}
+#slide3:target~.container .bottom-block .caption {
+  transform: translateX(-50%);
+}
+#slide4:target~.container .bottom-block .caption {
+  transform: translateX(-75%);
+}
+
+#slide1:target~.container .bottom-block .control a:nth-child(1) span {
+  background-color: transparent !important;
+}
+#slide2:target~.container .bottom-block .control a:nth-child(2) span {
+  background-color: transparent !important;
+}
+#slide3:target~.container .bottom-block .control a:nth-child(3) span {
+  background-color: transparent !important;
+}
+#slide4:target~.container .bottom-block .control a:nth-child(4) span {
+  background-color: transparent !important;
 }
 
 p {
   color: red;
+}
+
+
+
+@media screen and (max-width: 420px) {
+  .container {
+    width: 400px;
+  }
+  .wrapper {
+    padding-top: 50px;
+  }
+  .slider-wrapper {
+    width: 400px;
+  }
+  .slider {
+    height: 400px;
+  }
+  .slide img {
+    height: 380px;
+  }
+  .bottom-block {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .captions {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+  }
+  .caption {
+    font-size: 10px;
+    line-height: 12px;
+    text-align: start;
+    margin: 16px 0;
+  }
+  .controls {
+    float: right;
+    width: 100%;
+  }
+  .control {
+    display: flex;
+    justify-content: center;
+  }
+  .controls a {
+    width: 12px;
+    height: 12px;
+    padding: 0 2px;
+  }
+  .controls span {
+    display: inline-block;
+    width: 60%;
+    height: 60%;
+    border: 1px solid sandybrown;
+  }
+
+  footer {
+    width: 400px;
+    margin: 0 auto;
+  }
+  .footer {
+    padding-top: 150px;
+  }
+
+  .gh-logo,
+  .rs-logo {
+    min-width: 150px;
+  }
+
 }
