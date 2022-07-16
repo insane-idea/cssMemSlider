@@ -74,10 +74,11 @@ input[type="radio"] {
   text-align: left;
 }
 .caption span {
-  width: 24.85%;
-  padding: 0;
+  max-width: 24.8%;
+  width: 25%;
+  padding: 0 0 0 10px;
   margin: 0;
-  outline: none;
+  box-sizing: border-box;
 }
 .controls {
   float: right;
