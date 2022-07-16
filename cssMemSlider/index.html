@@ -1,75 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Mem Slider</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <div class="wrapper">
-      <input type="radio" class="bullet" name="slider-radio" id="slide1" checked>
-      <input type="radio" class="bullet" name="slider-radio" id="slide2">
-      <input type="radio" class="bullet" name="slider-radio" id="slide3">
-      <input type="radio" class="bullet" name="slider-radio" id="slide4">
-    <div class="container">
-      <div class="slider-wrapper">
-      <div class="slider">
-        <label class="slide slide1" for="slide1">
-          <img src="assets/img/slide1.jpg" alt="slide1">
-        </label>
-        <label class="slide slide2" for="slide2">
-          <img src="assets/img/slide2.png" alt="slide2">
-        </label>
-        <label class="slide slide3" for="slide3">
-          <img src="assets/img/slide3.jpg" alt="slide3">
-        </label>
-        <label class="slide slide4" for="slide4">
-          <img src="assets/img/slide4.jpg" alt="slide4">
-        </label>
-      </div>
-    </div>
-    <div class="bottom-block">
-      <div class="captions">
-        <div class="caption">
-          <span>Когда я вижу, как ты верстаешь, Малыш, ты меня пугаешь (про меня).</span>
-          <span>Это не баг — это незадокументированная фича.</span>
-          <span>Я как компьютер - тоже засыпаю после 20 минут бездействия.</span>
-          <span>Если кодить на JavaScript под водой, то никто не поймет, что вы плачете.</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS mem slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <input
+        type="radio"
+        class="bullet"
+        name="slider-radio"
+        id="slide1"
+        checked
+      />
+      <input type="radio" class="bullet" name="slider-radio" id="slide2" />
+      <input type="radio" class="bullet" name="slider-radio" id="slide3" />
+      <input type="radio" class="bullet" name="slider-radio" id="slide4" />
+      <div class="container">
+        <div class="slider-wrapper">
+          <div class="slider">
+            <label class="slide slide1" for="slide1">
+              <img src="assets/img/slide1.jpg" alt="slide1" />
+            </label>
+            <label class="slide slide2" for="slide2">
+              <img src="assets/img/slide2.png" alt="slide2" />
+            </label>
+            <label class="slide slide3" for="slide3">
+              <img src="assets/img/slide3.jpg" alt="slide3" />
+            </label>
+            <label class="slide slide4" for="slide4">
+              <img src="assets/img/slide4.jpg" alt="slide4" />
+            </label>
+          </div>
+        </div>
+        <div class="bottom-block">
+          <div class="captions">
+            <div class="caption">
+              <span
+                >Когда я вижу, как ты верстаешь, малыш, ты меня пугаешь</span
+              >
+              <span>Это не баг — это незадокументированная фича</span>
+              <span
+                >Я как компьютер - тоже засыпаю после 20 минут бездействия</span
+              >
+              <span
+                >Если кодить на JavaScript под водой, то никто не поймет, что вы
+                плачете</span
+              >
+            </div>
+          </div>
+          <div class="controls">
+            <div class="control">
+              <a href="#slide1"><span></span></a>
+              <a href="#slide2"><span></span></a>
+              <a href="#slide3"><span></span></a>
+              <a href="#slide4"><span></span></a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="controls">
-        <div class="control">
-          <a href="#slide1"><span></span></a>
-          <a href="#slide2"><span></span></a>
-          <a href="#slide3"><span></span></a>
-          <a href="#slide4"><span></span></a>
+    </div>
+
+    <footer>
+      <div class="footer">
+        <div class="gh-logo">
+          <figure class="logo">
+            <a target="_blank" href="https://github.com/insane-idea">
+              <img src="assets/svg/icon_github.svg" alt="gh-logo" />
+            </a>
+          </figure>
+        </div>
+        <div class="rs-logo">
+          <figure class="logo">
+            <a target="_blank" href="https://rs.school/js/">
+              <img src="assets/svg/rs_school_js.svg" alt="RS_School" />
+            </a>
+          </figure>
         </div>
       </div>
-    </div>
-    </div>
-  </div>
-
-  <footer>
-    <div class="footer">
-      <div class="gh-logo">
-        <figure class="logo">
-          <a target="_blank" href="https://github.com/insane-idea">
-            <img src="assets/svg/icon_github.svg" alt="gh-logo">
-          </a>
-        </figure>
-      </div>
-      <div class="rs-logo">
-        <figure class="logo">
-          <a target="_blank" href="https://rs.school/js/">
-            <img src="assets/svg/rs_school_js.svg" alt="RS_School"/>
-          </a>
-        </figure>
-      </div>
-    </div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>
